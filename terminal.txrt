@@ -1,0 +1,20 @@
+1.00 s) Image 111, PSNR / KL 36.412/6134.8
+(1.00 s) Image 112, PSNR / KL 34.465/6412.9
+(1.00 s) Image 113, PSNR / KL 35.177/6315.4
+(1.00 s) Image 114, PSNR / KL 34.992/6324.4
+(1.00 s) Image 115, PSNR / KL 34.913/6424.0
+(1.00 s) Image 116, PSNR / KL 36.065/6127.9
+(1.00 s) Image 117, PSNR / KL 35.378/6316.1
+(1.00 s) Image 118, PSNR / KL 35.157/6366.9
+(1.00 s) Image 119, PSNR / KL 33.803/6705.2
+(1.01 s) Image 120, PSNR / KL 34.792/6474.0
+(1.01 s) Image 121, PSNR / KL 35.679/6102.6
+(1.01 s) Image 122, PSNR / KL 36.770/6014.8
+(1.01 s) Image 123, PSNR / KL 33.498/6578.7
+(1.01 s) Image 124, PSNR / KL 36.045/6048.5
+(1.01 s) Image 125, PSNR / KL 34.375/6405.1
+(1.00 s) Image 126, PSNR / KL 33.293/6720.6
+(1.00 s) Image 127, PSNR / KL 35.633/6237.2
+Updating model priors!
+Before Prior Update, KL / BPP / PSNR - 6325.9 / 8.91251 / 35.332
+After Prior Update, KL / BPP / PSNR - 6320.6 / 8.90499 / 35.347

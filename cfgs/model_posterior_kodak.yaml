@@ -11,14 +11,14 @@ std_init: -10.0
 init_std_scale: 0.5
 
 # training:
-train_dir: PATH_CLIC    # change it to your training set path
-num_training: 128   # number of training images used to learn the model prior
+train_dir: train    # change it to your training set path
+num_training: 2   # number of training images used to learn the model prior
 num_epoch: 96   # epoch number for loading the model prior
 
 # testing (learn posterior)
-test_dir: PATH_Kodak    # change it to your Kodak dataset path
+test_dir: train    # change it to your Kodak dataset path
 learning_rate: 0.0001
-num_test: 24
+num_test: 2
 num_iters: 25000   # number of variational optimization in each epoch
 beta_adjust_interval: 100  
 

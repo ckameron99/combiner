@@ -193,7 +193,7 @@ class TesterDDP():
 
             # optimization with all the pixels in the last stage.
             if step < int(num_iters * 0.95):
-                if args.dataset == "kodak":
+                if args.dataset == "kodak" or args.dataset == "cifar":
                     n = features.shape[0]
                     index = torch.randperm(n)[:n//4].to(self.device)
                     coordinates_input = torch.index_select(coordinates, 0, index)

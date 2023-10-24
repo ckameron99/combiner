@@ -11,8 +11,8 @@ std_init: -10.0
 init_std_scale: 0.5
 
 # training:
-train_dir: PATH_CLIC
-num_training: 128 # number of training data used to learn model prior
+train_dir: train
+num_training: 2 # number of training data used to learn model prior
 num_iters: 200 # number of variational optimization in each epoch
 learning_rate: 0.0001
 num_epoch: 96 
