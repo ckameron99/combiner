@@ -5,7 +5,7 @@ import imageio
 
 import torch
 import torchvision
-from models import SmoothStd, SirenPosterior, SirenPrior
+from models import SmoothStd, SirenPosterior, SirenPrior, ConditionalSirenPosterior
 
 def bpp(image, model):
     """Computes size in bits per pixel of model.
@@ -142,8 +142,9 @@ def update_prior(args, model_prior):
 
     model_q_list = []
     kl_before = 0
-    for image_id in range(num_data):            
-        model = SirenPosterior(
+    for image_id in range(num_data):
+        model_class = ConditionalSirenPosterior if args.conditional else SirenPosterior
+        model = model_class(
             dim_in=args.dim_in,
             dim_emb=args.dim_emb, 
             dim_hid=args.dim_hid, 

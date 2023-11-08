@@ -9,7 +9,7 @@ import torch.optim.lr_scheduler as LS
 import torchvision
 
 import utils
-from models import SirenPosterior
+from models import SirenPosterior, ConditionalSirenPosterior
 from PracticalCoding.partition import adjust_beta_with_mask
 
 
@@ -94,7 +94,8 @@ class TrainerDDP():
 
     # set up the model
     def build_model(self, args, model_path, epoch):
-        model = SirenPosterior(
+        model_class = ConditionalSirenPosterior if args.conditional else SirenPosterior
+        model = model_class(
             dim_in=args.dim_in,
             dim_emb=args.dim_emb, 
             dim_hid=args.dim_hid, 

@@ -8,7 +8,7 @@ import torch
 import torch.multiprocessing as mp
 
 import utils
-from models import SirenPrior
+from models import SirenPrior, ConditionalSirenPrior
 from run_ddp import TrainerDDP
 
 
@@ -38,6 +38,9 @@ def parse_args():
     parser.add_argument(
         "--epoch_start", type=int, default=1,
         help="start point for training"
+    )
+    parser.add_argument(
+        "--conditional", type=bool, default=False,
     )
 
     args = parser.parse_args()
@@ -77,7 +80,8 @@ def main():
     if not os.path.exists(args.log_dir):
         os.makedirs(args.log_dir)
 
-    model_prior = SirenPrior(
+    model_class = ConditionalSirenPrior if args.conditional else SirenPrior
+    model_prior = model_class(
         dim_emb=args.dim_emb, 
         dim_hid=args.dim_hid, 
         dim_out=3, 
